@@ -1,6 +1,5 @@
 
 const handler = (req, res) => {
-
     switch (req.method) {
         case 'GET': // obtiene un usuario por id
 
@@ -9,8 +8,8 @@ const handler = (req, res) => {
             return res.status(200).json({
                 message: 'hola'
             })
-            case 'DELETE': // elimina un usuario por id
-            
+        case 'DELETE': // elimina un usuario por id
+
             return res.status(200).json({
                 message: 'hola'
             })
@@ -18,10 +17,7 @@ const handler = (req, res) => {
             return res.status(405).json({
                 message: 'method not allowed'
             })
-
     }
-
-
 }
 
 export default handler

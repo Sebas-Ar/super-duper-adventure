@@ -5,7 +5,6 @@ const Something = () => {
             <h2>hola</h2>
         </>
     )
-
 }
 
 export default Something

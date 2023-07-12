@@ -1,12 +1,10 @@
 
 export const getAllUsersDB = /* async */ () => {
-
     try {
-
         console.log('consulta a la base de datos')
 
         // await -> ejecuta la consulta a la base de datos
-    
+
         const users = [
             {
                 name: 'John Doe',
@@ -17,10 +15,9 @@ export const getAllUsersDB = /* async */ () => {
                 age: 24
             }
         ]
-    
-        return {users: users}
-        
+
+        return { users: users }
     } catch (error) {
-        return {errorDB: error.message}
+        return { errorDB: error.message }
     }
 }

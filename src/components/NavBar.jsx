@@ -1,15 +1,11 @@
 import Link from 'next/link'
 
-
-
 const NavBar = () => {
-    
-
     return (
         <nav>
             <h1>Navegacion</h1>
 
-                <Link href="/contact">link hacia algun lugar</Link>
+            <Link href="/contact">link hacia algun lugar</Link>
 
             <style jsx>{`
 

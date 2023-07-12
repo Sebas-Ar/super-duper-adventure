@@ -1,9 +1,7 @@
-import { createUserServices, getAllUsersServices } from "../services/users.services"
-
+import { createUserServices, getAllUsersServices } from '../services/users.services'
 
 export const getAllUsers = (req, res) => {
-    
-    const {users, errorService} = getAllUsersServices(req.body)
+    const { users, errorService } = getAllUsersServices(req.body)
     if (errorService) throw new Error(errorService)
 
     return res.status(200).json({
@@ -16,13 +14,12 @@ export const getAllUsers = (req, res) => {
 
 export const createUser = (req, res) => {
     try {
+        // const errorValidation = validateUserData(req.body)
+        // if (errorValidation) throw new Error(errorValidation)
 
-        errorValidation = validateUserData(req.body)
-        if (errorValidation) throw new Error(errorValidation)
-        
-        errorService = createUserServices(req.body)
+        const errorService = createUserServices(req.body)
         if (errorService) throw new Error(errorService)
-    
+
         return res.status(200).json({
             data: {
                 user: {
@@ -31,13 +28,9 @@ export const createUser = (req, res) => {
             },
             message: 'elemento creado satisfactoriamente dentro de la base de datos'
         })
-
     } catch (error) {
-
         return res.status(402).json({
             message: 'datos insuficientes'
         })
-        
     }
-
 }

@@ -1,29 +1,25 @@
 import axios from 'axios'
 
-import { useState, Children, useEffect } from "react"
+import { useState, Children, useEffect } from 'react'
 
-const MainTitle = ({text, color}) => {
-
+const MainTitle = ({ text, color }) => {
     const [pokemonAbilities, setpokemonAbilities] = useState([])
     const [numero, setNumber] = useState(5)
-    
+
     // primera vez que carga el componente - > Montar el componente
     // cuando cambia un estado -> numero
-    
+
     useEffect(() => {
         getPockenAbilities()
     }, [])
-    
-    
+
     const incrementNumber = () => {
-        
         setNumber(numero + 1)
-        
     }
 
-    const addUser = () => {
-        setUserList([...userList, { name: 'andres', age: 10}])
-    }
+    // const addUser = () => {
+    //     setUserList([...userList, { name: 'andres', age: 10 }])
+    // }
 
     const getPockenAbilities = async () => {
         const pikachu = await axios.get('https://pokeapi.co/api/v2/pokemon/pikachu')
