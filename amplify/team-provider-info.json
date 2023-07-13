@@ -10,6 +10,11 @@
       "StackName": "amplify-nextjshelloworld-dev-192120",
       "StackId": "arn:aws:cloudformation:us-east-2:776516132940:stack/amplify-nextjshelloworld-dev-192120/08233d60-204a-11ee-945a-06cf75f9a337",
       "AmplifyAppId": "do6arzh8be80s"
+    },
+    "categories": {
+      "auth": {
+        "nextjshelloworldccad70d5": {}
+      }
     }
   }
 }
