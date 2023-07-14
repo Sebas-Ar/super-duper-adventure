@@ -1,4 +1,4 @@
-import { Auth } from 'aws-amplify'
+import { resgisterUser } from '@/auth/congnito'
 
 const Register = () => {
     const handleSubmit = async (e) => {
@@ -8,20 +8,7 @@ const Register = () => {
         const data = Object.fromEntries(formData)
         console.log(data)
 
-        try {
-            const { user } = await Auth.signUp({
-                username: data.email,
-                password: data.password,
-                attributes: {
-                    email: data.email,
-                    phone_number: '+573203709957'
-                }
-            })
-
-            console.log(user)
-        } catch (error) {
-            console.log(error.message)
-        }
+        await resgisterUser(data)
     }
 
     return (
