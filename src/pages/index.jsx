@@ -1,14 +1,15 @@
+// React
+import { useEffect, useState } from 'react'
+
+// Recoil
+import { textState } from '@/globalState/atoms'
+import { useRecoilValue } from 'recoil'
+
 // componentes
 import MainHeader from '@/components/MainHeader'
 import MainTitle from '@/components/MainTitle'
 import NavBar from '@/components/NavBar'
-
-// Reack
-import { useEffect, useState } from 'react'
-
-// Recoil
-import { useRecoilValue } from 'recoil'
-import { textState } from '@/globalState/atoms'
+import SendMQTTMessage from '@/components/sendMQTTMessage'
 
 const Home = () => {
     const [showTitle, setShowTitle] = useState(true)
@@ -39,6 +40,8 @@ const Home = () => {
             </MainHeader>
 
             <NavBar fatherState={showTitle} />
+
+            <SendMQTTMessage />
 
         </div>
     )

@@ -46,7 +46,14 @@ module.exports = {
                     'jsx'
                 ]
             }
-        ]
+        ],
+        'sort-imports': ['error', {
+            ignoreCase: false,
+            ignoreDeclarationSort: false,
+            ignoreMemberSort: false,
+            memberSyntaxSortOrder: ['none', 'all'],
+            allowSeparatedGroups: false
+        }]
         // "@next/next/no-img-element": "off"
     }
 }
