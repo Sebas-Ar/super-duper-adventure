@@ -29,6 +29,7 @@ const Home = () => {
 
         <div>
             <h1>page title: {text}</h1>
+            <img src="https://hello-word-s3-roda-1.s3.amazonaws.com/roda-logo-light.png" alt="logo de roda" />
             <MainHeader>
                 <button onClick={toggleTitle}>toggle title</button>
                 {
