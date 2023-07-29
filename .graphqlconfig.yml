@@ -1,0 +1,18 @@
+projects:
+  RODATest:
+    schemaPath: src/graphql/schema.json
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+        region: us-east-1
+        apiId: w2ya32p4vzd43kneat3ftu74ru
+        maxDepth: 2
+extensions:
+  amplify:
+    version: 3
